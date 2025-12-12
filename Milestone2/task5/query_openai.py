@@ -7,7 +7,7 @@ load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
 if not api_key:
-    raise ValueError("❌ ERROR: OPENAI_API_KEY not found in .env file")
+    raise ValueError("ERROR: OPENAI_API_KEY not found in .env file")
 
 
 llm = ChatOpenAI(
@@ -15,7 +15,7 @@ llm = ChatOpenAI(
     temperature=0.7
 )
 
-# Ask a random question
+# Asking a random question
 response = llm.invoke("Explain recursion in simple words with an example.")
 
 print("🔹 GPT-3.5 Turbo Response:\n")
